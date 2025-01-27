@@ -1,0 +1,302 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url(stbackground2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    }
+    
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .navbar {
+        background-color: #9ed9ee;
+        overflow: hidden;
+        padding: 10px 1px 10px 1px;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 1px 20px 1px 20px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        color: #0c275d;
+        border-radius: 10px;
+        width: fit-content;
+        padding: 5px 1px 5px 1px;
+        font-family: "Nova Round", serif;
+    }
+    
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logoName {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: 3px;
+    }
+    
+    #likedContentlogo svg {
+        fill: #0c275d;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    #likedContentlogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 4px 4px 3px 4px;
+        border-radius: 10px;
+    }
+    
+    #likedContentlogo :hover {
+        fill: #f3f7f9;
+    }
+    
+    #profilelogo :hover {
+        fill: #f3f7f9;
+        fill: #f3f7f9;
+    }
+    
+    #profilelogo svg {
+        fill: #0c275d;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    #profilelogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 4px 4px 3px 4px;
+        border-radius: 10px;
+    }
+    
+    .circles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3vh;
+        flex-wrap: wrap;
+        float: right;
+    }
+    
+    #searchInput {
+        fill: #0c275d;
+        width: 600px;
+        height: 30px;
+        cursor: pointer;
+        border: 1.5px solid #05173c;
+        border-radius: 100px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    @media (max-width: 852px) {
+        #searchInput {
+            width: 100%;
+        }
+        ul {
+            flex-direction: column;
+        }
+        .circles {
+            display: block;
+        }
+        #searchBox {
+            padding: 10px 1px 10px 1px;
+        }
+        #likedContentlogo {
+            padding: 5px 1px 5px 1px;
+        }
+        #profilelogo {
+            padding: 10px 1px 5px 1px;
+        }
+    }
+    
+    .welcome {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        color: #000000;
+        border-bottom: 0.6px solid white;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background: linear-gradient(rgba(255, 255, 255, 0.497), rgba(153, 212, 224, 0.64));
+    }
+    
+    #courses {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .card {
+        width: 300px;
+        /* Set the card width */
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        overflow: hidden;
+        /* Ensures the image doesn't overflow the card */
+        margin: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #ffffffb8;
+    }
+    /* Make the thumbnail responsive */
+    
+    #courseThumbnail {
+        width: 100%;
+        /* Ensures the image takes the full width of the card */
+        height: auto;
+        /* Maintains the aspect ratio */
+        display: block;
+        /* Prevents gaps at the bottom of the image */
+        border-bottom: 1px solid #ddd;
+        /* Optional: adds a border below the image */
+    }
+    /* Card content styling */
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .card-text {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .teacherName {
+        font-size: 12px;
+        color: #555;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    #courseprice {
+        font-size: 14px;
+        color: #333;
+        font-weight: bolder;
+        margin-bottom: 15px;
+    }
+    /* Button group */
+    
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #buyBtn button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    #buyBtn button:hover {
+        background-color: #0056b3;
+    }
+    
+    #likeCourseBtn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    #likeCourseBtn svg {
+        fill: #0056b3;
+        transition: fill 0.3s;
+    }
+    
+    #likeCourseBtn svg:hover {
+        fill: #ffffff;
+    }
+    
+    #openingLine {
+        margin: 10px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+    }
+    
+    .container {
+        background-color: #05173c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #twitter {
+        fill: #ffffff;
+        margin: 1px 10px 1px 10px;
+    }
+    
+    #twitter :hover {
+        fill: #007bff;
+    }
+    
+    #instagram {
+        fill: #ffffff;
+        margin: 1px 10px 1px 10px;
+    }
+    
+    #instagram :hover {
+        fill: #007bff;
+    }
+    
+    #linkedIn {
+        fill: #ffffff;
+        margin: 1px 10px 1px 10px;
+    }
+    
+    #linkedIn :hover {
+        fill: #007bff;
+    }
+    
+    #socialmedia {
+        display: flex;
+        justify-content: center;
+        height: 7vmin;
+        gap: 10px;
+    }
